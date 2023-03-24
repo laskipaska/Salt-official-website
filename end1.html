@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ff0000;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+</style>
+<body  onload="myFunction()">
+
+
+<script>
+function myFunction() {
+    var delayInMilliseconds = 1190; //1 second
+
+setTimeout(function() {
+    document.getElementsByTagName ('html') [0] .remove ();
+}, delayInMilliseconds);
+    
+}
+</script>
+<img src="img/yotsubagun.gif" alt="die" class="center">
+
+</body>
+</html>

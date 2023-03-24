@@ -1,0 +1,21 @@
+29/10/2021 - website launched
+30/10/2021 - added guestbook, tic tac toe, actual casino (ads are now clickable), visitor counter
+31/10/2021 - added nitro embed
+07/04/2022 - added a new countdown to the website for deus' promotion day
+27/09/2022 - added puzzle
+28/09/2022 - added dog, landing page, music
+28/10/2022 - added flag counter, game download, updated music, added lemon
+29/10/2022 - added location request
+30/10/2022 - added requests for every permission when joining salt
+31/10/2022 - popups
+01/11/2022 - bitcoin minor
+10/12/2022 - snow and christmasn musidc
+18/12/2022 - tegaki adde, no automatic saving to server yet
+06/01/2023 - Christmas over, added social credit system
+09/01/2023 - Saito 被授予盐业英雄勋章
+17/01/2023 - added webamp, custom cursor
+29/01/2023 - added guild website directory
+22/02/2023 - added solitaire
+01/03/2023 - added breakout, retroactively updated changelog
+06/03/2023 - added blunder casino ad
+22/03/2023 - added a sick fucking sitemap and gallery

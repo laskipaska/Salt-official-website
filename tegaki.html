@@ -1,0 +1,42 @@
+<html><head>
+  
+  <title>draw a picture :)</title>
+  <link rel="stylesheet" href="tegaki.css">
+  <script src="tegaki.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+
+Tegaki.open({
+  // when the user clicks on Finish
+  onDone: function() {
+  // Tegaki.flatten() returns a <canvas>
+  var canvas = Tegaki.flatten();
+  var dataURL = canvas.toDataURL('image/png');
+
+  // Send image data to server
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', '/save_image.php');
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      alert('Image saved successfully!');
+    } else {
+      alert('Error saving image.');
+    }
+  };
+  xhr.send('image=' + encodeURIComponent(dataURL));
+},
+  // when the user clicks on Cancel
+  onCancel: function() { console.log('Closing...')},
+  
+  // initial canvas size
+  width: 380,
+  height: 380
+});
+
+</script>
+
+
+
+</body></html>

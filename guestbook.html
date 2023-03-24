@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<audio id="divAudio">
+   <source src="another_night.mp3" type="audio/mp3">
+</audio>
+
+<script>
+   var vAudio = document.getElementById("divAudio");
+   var hasInit = false;
+   function playMusic()
+   {
+      if(!hasInit)
+      {
+          hasInit = true;
+          vAudio.play();
+      }
+   }
+</script>
+<div onmouseover="playMusic()">
+    </head>
+<body>
+<?php include 'guestbook/gbook.php'; ?>
+  
+
+</body>
+</div>
+</html>

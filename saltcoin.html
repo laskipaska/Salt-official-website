@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .button {
+  background-color: #00CED1; 
+  color: white;
+  padding: 30px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+}
+body {background-color: coral;}
+    </style>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Bitcoin minor (real)!</title>
+	<audio id="divAudio" loop>
+   <source src="sound/asianata.mp3" type="audio/mp3">
+</audio>
+
+<script>
+   var vAudio = document.getElementById("divAudio");
+   var hasInit = false;
+   function playMusic()
+   {
+      if(!hasInit)
+      {
+          hasInit = true;
+          vAudio.play();
+      }
+   }
+</script>
+
+
+
+<div onmouseover="playMusic()">
+	
+  <link rel="icon" 
+      type="image/png" 
+      href="img/bitcoin.png">
+</head>
+
+<body>
+
+	<h1> Bits coins: </h1>
+	<h2 id="bitcoins"> 0 </h2>
+	<img src="img/bitcoin.png" onclick="ClickUp();" id="bitcoin" />
+    <p> Made by Noel </p>
+    <p id="cpsDisplay"> You are getting: 0 per second</p> 
+    <p id="cpcDisplay"> You are getting: 0 per click</p>
+    <button class="button" id="smallcpcBuy" onclick="cpcUp();" >+1 bitcoin Per Click! 25 bitcoin. </button>
+    <button class="button" id="bigcpcBuy" onclick="bigcpcUp();" >+6 bitcoin Per Click! 250 bitcoin. </button>
+    <button class="button" id="ClickerBuy" onclick="buyClicker();" >+1 bitcoin Per Second! 50 bitcoin. </button>
+    <button class="button" id="BigClickerBuy" onclick="buyBigClicker();" >+5 bitcoin Per Second! 300 bitcoin. </button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button onclick="resetData();" >Reset your data</button>
+    
+    <script src="script.js"></script>
+
+
+</div>
+  </body>
+</html>

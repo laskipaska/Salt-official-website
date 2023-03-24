@@ -1,0 +1,200 @@
+body {
+    background-color: #1d1f21;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/*
+Header stuff
+ */
+
+header .graphic {
+    float: right;
+    margin-top: 6px;
+}
+
+nav {
+    margin-bottom: 2px;
+}
+
+nav a {
+    color: #81a2be;
+    padding: 1px 5px;
+}
+
+a.active {
+    background-color: #81a2be;
+    color: #1d1f21;
+    text-decoration: none;
+}
+
+.pagination{
+  text-align: right;
+  margin-bottom: 5px;
+}
+
+.pagination a{
+  color: #81a2be;
+}
+
+.pagination .current {
+  text-decoration: none;
+}
+
+/*
+Line-like separator for above and below the nav, and above the header
+ */
+.separator {
+    width: 100%;
+    height: 13px;
+    background-image: url(img/peelodotline.png)
+}
+
+/*
+Main body
+ */
+
+main {
+    margin: 0 auto;
+    width: 700px;
+    display: table;
+}
+
+.entry {
+    color: #c5c8c6;
+    text-decoration: none;
+    display: block;
+    padding: 5px 5px 5px 55px;
+}
+
+.entry span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.entry .site {
+    width: 360px;
+}
+
+#random_site:hover{
+cursor: pointer;
+}
+
+/*
+Color of a visited URL (for #1d1f21 entries)
+ */
+a.entry:nth-child(even):visited {
+    /*color: #3c00a3;*/
+}
+
+/*
+Color of a visited URL (for blue entries)
+ */
+a.entry:nth-child(odd):visited {
+    /*color: #7151a8;*/
+}
+
+.entry:nth-child(even) {
+    background-color: #282a2e;
+}
+
+.entry:nth-child(odd) {
+    color: #81a2be;
+}
+
+.entry:nth-child(odd) .site {
+    text-decoration: underline;
+}
+
+.entry.table_header .site {
+    text-decoration: none;
+}
+
+footer {
+    text-align: right;
+    float: right;
+}
+
+footer a {
+    color: #81a2be;
+    text-decoration: underline;
+}
+
+/*
+This is mostly stuff for 'text'-like pages (ie. what is this? and news)
+ */
+
+section {
+    color: #c5c8c6;
+    font-size: 12px;
+}
+
+section h1, section h2 {
+    font-size: 12px;
+}
+
+section p, section a, section ul li {
+    font-weight: normal;
+}
+
+section a {
+    color: #81a2be;
+    display: inline-block;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ko_fi {
+    margin: 0 auto;
+    display: block;
+    width: 105px;
+}
+
+/*
+ Navigation for newer/older news on news page
+ */
+.news_nav {
+    display: block;
+}
+
+.news_nav img {
+    position: relative;
+    top: 4px;
+}
+
+/*
+CSS for responsive stuff (mobile)
+ */
+@media screen and (max-width: 730px) {
+    main {
+        width: 380px;
+    }
+
+    .entry {
+        padding: 5px 5px 5px 5px;
+    }
+
+    .entry .site {
+        width: 70px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    main {
+        width: 100%;
+    }
+
+    .graphic {
+        display: none;
+    }
+
+    .logo {
+        max-width: 100%;
+        margin: 0 auto;
+        display: table;
+    }
+}

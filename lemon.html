@@ -1,0 +1,71 @@
+
+<html>
+    
+    <style>
+ 
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+    
+}
+</style>
+	<head>
+
+		<title>euuggh very sour!1!!</title>
+           
+		
+	
+
+	</head>
+
+	
+
+	<body>
+	    <audio id="divAudio">
+   <source src="sound/lemon.mp3" type="audio/mp3">
+</audio>
+
+<script>
+   var vAudio = document.getElementById("divAudio");
+   var hasInit = false;
+   function playMusic()
+   {
+      if(!hasInit)
+      {
+          hasInit = true;
+          vAudio.play();
+      }
+   }
+</script>
+<div onmouseover="playMusic()">
+	     <center>
+        <p style="font-size:30pt">Wehn eat lemon</p>
+  </center>
+<div style="width:100%;text-align:center;">
+    <a href="test.html"><img src='img/lemon.png'></a> 
+</div>
+
+<script>
+function closeMe()
+{
+   window.open("", "_self");
+window.close();
+}
+</script>
+	
+
+			
+			
+</div>	</body>
+
+</html>

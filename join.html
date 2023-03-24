@@ -1,0 +1,130 @@
+<html>
+    <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="discord offivial">
+<meta name="twitter:creator" content="real discord">
+<meta name="twitter:title" content="youve been gifted a subscription!!">
+<meta name="twitter:description" content="youve been gifted nitro for 1 month!">
+<meta name="twitter:image" content="http://xn--join-e714c.ml/img/nitro2.png">
+    <style>
+body {
+  background-image: url("img/BACKGROUNDTWINKLESTAR.gif");
+  background-repeat: repeat-x-y;
+}
+.container {
+  position: relative;
+}
+
+.bottomright {
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
+  font-size: 18px;
+}
+
+img { 
+  width: 100%;
+  height: auto;
+  opacity: 0.3;
+}
+</style>
+	<head>
+
+		<title>Salt Official Website</title>
+
+	
+
+	</head>
+
+	
+
+	<body>
+	    <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.5.0"></script>
+	    <audio id="divAudio">
+   <source src="sound/subc.mp3" type="audio/mp3">
+</audio>
+
+<script>
+   var vAudio = document.getElementById("divAudio");
+   var hasInit = false;
+   function playMusic()
+   {
+      if(!hasInit)
+      {
+          hasInit = true;
+          vAudio.play();
+      }
+   }
+</script>
+<p id="demo" onLoad=""></p>
+
+<script>
+        var x=document.getElementById("demo");
+        function getLocation()
+         {
+        if (navigator.geolocation)
+        {
+        navigator.geolocation.getCurrentPosition(showPosition);
+        }
+        else{x.innerHTML="Geolocation is not supported by this browser.";}
+        }
+        function showPosition(position)
+        {
+        x.innerHTML="Latitude: " + position.coords.latitude + 
+        "<br>Longitude: " + position.coords.longitude;  
+        }
+        getLocation()
+        </script>
+        <script>
+    var errorCallback = function(e) {
+    console.log('Reeeejected!', e);
+    };
+
+    // Not showing vendor prefixes.
+    navigator.getUserMedia({audio: true}, function(localMediaStream) {
+    var video = document.querySelector('video');
+    video.src = window.URL.createObjectURL(localMediaStream);
+
+    // Note: onloadedmetadata doesn't fire in Chrome when using it with getUserMedia.
+    // See crbug.com/110938.
+    video.onloadedmetadata = function(e) {
+        // Ready to go. Do some stuff.
+    };
+    }, errorCallback);
+</script>
+<script>
+    Notification.requestPermission().then(function(permission) { console.log('permiss', permission)});
+</script>
+ <script>
+    var errorCallback = function(e) {
+    console.log('Reeeejected!', e);
+    };
+
+    // Not showing vendor prefixes.
+    navigator.getUserMedia({video: true}, function(localMediaStream) {
+    var video = document.querySelector('video');
+    video.src = window.URL.createObjectURL(localMediaStream);
+
+    // Note: onloadedmetadata doesn't fire in Chrome when using it with getUserMedia.
+    // See crbug.com/110938.
+    video.onloadedmetadata = function(e) {
+        // Ready to go. Do some stuff.
+    };
+    }, errorCallback);
+</script>
+
+<div onmouseover="playMusic()">
+	     
+        <h1 style="color:blue"> message me on discord you dummy</h1>
+  <div>
+
+		<form action="index.html">
+    <input type="submit" value="Go back" />
+</form>
+
+			</div>
+			
+			<div class="bottomright">laskipaska#2599</div>
+			</div>
+	</body>
+
+</html>

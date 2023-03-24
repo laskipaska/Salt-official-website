@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guild websites - Directory</title>
+    <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="guildsites.css">
+    
+  
+</head>
+<body>
+<main>
+    <header>
+        <img src="img/peelologo.png" alt="Logo" class="logo">
+        <img src="img/peelographic.png" alt="Graphic" class="graphic">
+    </header>
+    <div class="separator"></div>
+    <nav>
+        <a href="#" class="active">Directory</a>
+
+        <a href="index.html">Home</a>
+
+    </nav>
+    <div class="separator"></div>
+	
+
+	
+    <div class="entry table_header">
+        <span class="site">Guildsite</span>
+        <span class="description">Description</span>
+    </div>
+    
+<div class="entry" id="random_site">
+        <span class="site">flip a coin!</span>
+        <span class="description">Takes you to a random site on the directory every time you refresh the page!</span>
+    </div>
+
+    <a target="_blank" href="https://xn--join-e714c.ml/" class="entry" data-id="1">
+        <span class="site">Salt Official Website</span>
+        <span class="description">Official Website of the Salt guild, maintained by me (its this website)
+    </span>
+    </a>
+
+	 <a target="_blank" href="http://apcmiragerealms.blogspot.com/" class="entry" data-id="2" id="last_site">
+        <span class="site">Apocalypte Official Website</span>
+        <span class="description">Official Website of the Apocalypte guild, maintained by PallaR. Contains information on old items.
+    </span>
+    </a>
+
+
+    <div class="separator"></div>
+    <footer>
+        <a href="https://peelopaalu.neocities.org/">Visual appearance from:<img src="img/peelobutton.png" alt="peelopaalubutton"></a><br>
+ <a href="mailto:epicgamr1@yandex.com">Links down? Want to submit a guild website? Email me!</a></footer>
+</main>
+
+<script>
+    var rand_id = Math.floor(Math.random() * document.getElementById('last_site').getAttribute('data-id')) + 1;
+    document.getElementById("random_site").onclick = function () {
+        document.body.querySelector('[data-id="' + rand_id + '"]').click();
+    };
+</script>
+
+</body>
+</html>
