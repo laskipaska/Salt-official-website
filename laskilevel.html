@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>What level is laski(on the ptr)?</title>
+</head>
+<body>
+  <h1>Laski's current level:</h1>
+  <p id="mage-value"></p>
+
+  <script>
+    fetch('https://api.miragerealms.co.uk/public/v1/armoury/Laski')
+      .then(response => response.json())
+      .then(data => {
+        const mageValue = data.stats.levels.MAGE.value;
+        document.getElementById('mage-value').textContent = mageValue;
+      })
+      .catch(error => console.error(error));
+  </script>
+</body>
+</html>
