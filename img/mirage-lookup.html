@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <style>
+body {
+  background-image: url("img/pawbackground.gif");
+  background-repeat: repeat-x-y;
+  
+}
+
+</style>
+  <meta charset="UTF-8">
+  <title>Mirage Realms PTR player lookup</title>
+</head>
+<body>
+  <h1>Mirage Realms PTR player lookup</h1>
+  <label for="username-input">Username:</label>
+  <input type="text" id="username-input">
+  <button id="fetch-button">lookup</button>
+  <p id="knight-value"></p>
+  <p id="ranger-value"></p>
+  <p id="mage-value"></p>
+  <p id="shaman-value"></p>
+  <p id="creation-date"></p>
+  <p id="previous-names"></p>
+  <p id="error-message" style="color: red;"></p>
+
+  <script>
+    const fetchButton = document.getElementById('fetch-button');
+    const usernameInput = document.getElementById('username-input');
+    const knightValueDisplay = document.getElementById('knight-value');
+    const rangerValueDisplay = document.getElementById('ranger-value');
+    const mageValueDisplay = document.getElementById('mage-value');
+    const shamanValueDisplay = document.getElementById('shaman-value');
+    const creationDateDisplay = document.getElementById('creation-date');
+    const previousNamesDisplay = document.getElementById('previous-names');
+    const errorMessageDisplay = document.getElementById('error-message');
+
+     const handleFetch = () => {
+      const username = usernameInput.value;
+      const url = `https://api.miragerealms.co.uk/public/v1/armoury/${username}`;
+
+      
+      knightValueDisplay.textContent = '';
+      rangerValueDisplay.textContent = '';
+      mageValueDisplay.textContent = '';
+      shamanValueDisplay.textContent = '';
+      creationDateDisplay.textContent = '';
+      previousNamesDisplay.textContent = '';
+      errorMessageDisplay.textContent = '';
+
+      fetch(url)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Player not found');
+          }
+          return response.json();
+        })
+        .then(data => {
+          const creationDate = new Date(data.created);
+          const formattedCreationDate = creationDate.toLocaleDateString();
+          creationDateDisplay.textContent = `Account created on: ${formattedCreationDate}`;
+          const previousNames = data.previousNames;
+          previousNamesDisplay.textContent = `Previous names: ${previousNames}`;
+          
+          const knightValue = data.stats.levels.KNIGHT.value;
+          knightValueDisplay.textContent = `Knight level: ${knightValue}`;
+          const rangerValue = data.stats.levels.RANGER.value;
+          rangerValueDisplay.textContent = `Ranger level: ${rangerValue}`;
+          const mageValue = data.stats.levels.MAGE.value;
+          mageValueDisplay.textContent = `Mage level: ${mageValue}`;
+          const shamanValue = data.stats.levels.SHAMAN.value;
+          shamanValueDisplay.textContent = `Shaman level: ${shamanValue}`;
+          
+        })
+        .catch(error => {
+          console.error(error);
+          errorMessageDisplay.textContent = 'Player not found';
+        });
+};
+
+    fetchButton.addEventListener('click', handleFetch);
+    usernameInput.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        handleFetch();
+      }
+    });
+  </script>
+</body>
+</html>
