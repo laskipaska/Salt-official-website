@@ -6,14 +6,17 @@
 </head>
 <body>
   <h1>Laski's current level:</h1>
-  <p id="mage-value"></p>
-
+  <p style="font-size:200%;" id="mage-value"></p>
+  <h1>Laski's current exp:</h1>
+<p style="font-size:160%;" id="exp"></p>
   <script>
     fetch('https://api.miragerealms.co.uk/public/v1/armoury/Laski')
       .then(response => response.json())
       .then(data => {
         const mageValue = data.stats.levels.MAGE.value;
         document.getElementById('mage-value').textContent = mageValue;
+        const exp = data.stats.levels.MAGE.experience;
+        document.getElementById('exp').textContent = exp;
       })
       .catch(error => console.error(error));
   </script>
